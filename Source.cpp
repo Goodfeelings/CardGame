@@ -144,7 +144,7 @@ int main() {
 	int verifier = 0;
 	std::cout << "Welcome to the world's most advance and futuristic card drawing simulator." << std::endl;
 	std::cout << "Would you like to draw a card?" << std::endl;
-	std::cout << "Press 1 for Yes. Press 2 for 'No, I am a retard.'" << std::endl;
+	std::cout << "Press 1 for Yes. Press 2 for 'No.'" << std::endl;
 	std::cin >> verifier;
 
 	// Loop
