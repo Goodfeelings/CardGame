@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <string>
 
@@ -6,7 +6,7 @@
 /**********************
  ** GLOBAL VARIABLES **
  **********************/
-const int SUIT_MAX = 4;
+	const int SUIT_MAX = 4;
 const int FACE_MAX = 13;
 
 
@@ -92,10 +92,9 @@ public:
 
 		}
 	}
-	
+
 	// Generate the card's suit.
 	std::string getCardSuit() {
-
 		std::string suit = determineSuit();
 		return suit;
 	}
@@ -106,6 +105,7 @@ public:
 		return faceResult;
 	}
 
+	// Draw a card.
 	void drawCard() {
 
 		//determine the face value of the card and the length in characters.
@@ -119,7 +119,7 @@ public:
 
 		//print the card on screen
 		std::cout << std::setfill('*') << std::setw(10) << "*" << std::endl;
-		std::cout << "*" << cardFace << std::setw(9-faceLength) << std::setfill(' ')  << "*" << std::endl;
+		std::cout << "*" << cardFace << std::setw(9 - faceLength) << std::setfill(' ') << "*" << std::endl;
 		std::cout << "*        *" << std::endl;
 		std::cout << "*   of   *" << std::endl;
 		std::cout << "*        *" << std::endl;
@@ -128,6 +128,8 @@ public:
 	}
 
 private:
+	//Nothing yet.//
+
 };
 
 
@@ -137,14 +139,14 @@ private:
 int main() {
 
 	// Initialize Random Seed
-	unsigned seed = time(0);
+	unsigned int seed = time(0);
 	srand(seed);
 
 	// Begin
 	int verifier = 0;
 	std::cout << "Welcome to the world's most advance and futuristic card drawing simulator." << std::endl;
 	std::cout << "Would you like to draw a card?" << std::endl;
-	std::cout << "Press 1 for Yes. Press 2 for 'No.'" << std::endl;
+	std::cout << "Press 1 for Yes. Enter any other choice for No." << std::endl;
 	std::cin >> verifier;
 
 	// Loop
@@ -156,7 +158,7 @@ int main() {
 		card_2.drawCard();
 
 		std::cout << "Draw again?" << std::endl;
-		std::cout << "Press 1 for Yes. Press any other key for no.'" << std::endl;
+		std::cout << "Press 1 for Yes. Enter any other choice for No.'" << std::endl;
 		std::cin >> verifier;
 	}
 
